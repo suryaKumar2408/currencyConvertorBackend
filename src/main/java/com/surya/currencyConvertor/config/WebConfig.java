@@ -1,4 +1,4 @@
-package com.surya.currencyconvertor.config; // <-- adjust package name as per your project
+package com.surya.currencyConvertor.config; // <-- adjust package name as per your project
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -15,13 +15,14 @@ public class WebConfig {
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
                         .allowedOrigins(
-                                "http://localhost:5500",             // Local frontend testing
-                                "http://127.0.0.1:5500",             // Alternative local address
-                                "https://currency-convertor-frontend-iota.vercel.app/"   // Your deployed Vercel frontend
+                                "http://localhost:5500",
+                                "http://127.0.0.1:5500",
+                                "https://currency-convertor-frontend-iota.vercel.app"
                         )
                         .allowedMethods("GET", "POST", "PUT", "DELETE")
                         .allowedHeaders("*")
                         .allowCredentials(true);
+
             }
         };
     }
